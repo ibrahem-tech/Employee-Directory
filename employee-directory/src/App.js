@@ -1,26 +1,52 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import {Col, Row, Button, Glyphicon, Panel, ListGroupItem, ListGroup, FormControl } from 'react-bootstrap'
+import employeeList from './employeeList.json';
+import HomePage from './components/HomePage'
+import EmployeePage from './components/EmployeePage'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const filterEmployee = (searchText, maxResults) => {
+  return employeeList.filter((employee) => {
+    if (employee.data.name.toLowerCase().includes(searchText.toLowerCase())) {
+      return true;
+    }
+    return false;
+  }).slice(0, maxResults);
 }
 
-export default App;
+var maxResults =4;
+
+export default class App extends React.Component {
+  
+  constructor(){
+    super();
+    this.state = {
+        selectedEmployee: employeeList[0].data,
+        filteredEmployee: filterEmployee('', maxResults)
+    }
+}
+
+onSearch = (event) => {
+  this.setState({
+      filteredEmployee: filterEmployee(event.target.value, maxResults)
+  });
+}
+
+onEmployeeClick = (employee) => {
+  this.setState({
+      selectedEmployee: {name: employee.name, info: employee.info, contact: employee.contact}
+  });
+}
+
+  render() {
+    return (
+        <Col lg={8} md={7} sm={4} lgOffset={2}>
+            <Col lg={6}>
+                <HomePage onSearch={this.onSearch} employeeData={this.state.filteredEmployee} onEmployeeClick={this.onEmployeeClick}/>
+            </Col>  
+            <Col lg={6}>
+                <EmployeePage selectedEmployee={this.state.selectedEmployee}/>
+            </Col>
+        </Col>
+    );
+  }
+}
