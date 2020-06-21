@@ -1,0 +1,84 @@
+[
+    {
+      "id": 1,
+      "firstName": "Kristina",
+      "lastName":"Leo",
+      "employeeID": 352740,
+      "phone": "0112345678",
+      "department": "IT"
+    },
+    {
+      "id": 2,
+      "firstName": "Hannah",
+      "lastName": "Sue",
+      "employeeID": 455760,
+      "phone": "0112345678",
+      "department": "Sales"
+    },
+    {
+      "id": 3,
+      "firstName": "Anatoly",
+      "lastName": "Assi",
+      "employeeID": 395790,
+      "phone": "0112345678",
+      "department": "Sales"
+    },
+    {
+        "id": 4,
+        "firstName": "Linara",
+        "lastName": "Daniels",
+        "employeeID": 325730,
+        "phone": "0112345678",
+        "department": "Human Resources"
+      }
+      ,
+    {
+        "id": 5,
+        "firstName": "Lian",
+        "lastName": "Abed",
+        "employeeID": 358720,
+        "phone": "0112345678",
+        "department": "Human Resources"
+      },
+      {
+          "id": 6,
+          "firstName": "Yasmine",
+          "lastName": "Robinson",
+          "employeeID": 155760,
+          "phone": "0112345678",
+          "department": "Finance"
+        },
+        {
+            "id": 7,
+            "firstName": "Louis",
+            "lastName": "Morgan",
+            "employeeID": 354700,
+            "phone": "0112345678",
+            "department": "Human Resources"
+          },
+          {
+              "id": 8,
+              "firstName": "Winnie",
+              "lastName": "The Pooh",
+              "employeeID": 355920,
+              "phone": "0112345678",
+              "department": "Finance"
+            },
+            {
+              "id": 9,
+              "firstName": "Mickey",
+              "lastName": "Mouse",
+              "employeeID": 355650,
+              "phone": "0112345678",
+              "department": "IT"
+            },
+            {
+              "id": 10,
+              "firstName": "Donuld",
+              "lastName": "Duck",
+              "employeeID": 353770,
+              "phone": "0112345678",
+              "department": "Legal"
+            }
+
+  ]
